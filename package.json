@@ -13,9 +13,10 @@
     "start": "npm run build && electron .",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "test": "vitest run",
-    "package:mac": "npm run build && electron-builder --mac --dir",
-    "package:mac:dmg": "npm run build && electron-builder --mac dmg",
-    "package:win": "npm run build && electron-builder --win nsis"
+    "package:mac": "npm run build && npm run build:appicon && electron-builder --mac --dir",
+    "package:mac:dmg": "npm run build && npm run build:appicon && electron-builder --mac dmg",
+    "package:win": "npm run build && npm run build:appicon && electron-builder --win nsis",
+    "build:appicon": "electron scripts/render-icon.mjs"
   },
   "build": {
     "appId": "de.svenhuelsemann.wechsel",
@@ -37,7 +38,7 @@
         "NSUserNotificationAlertStyle": "alert"
       },
       "identity": "-",
-      "icon": "assets/generated/icon.png",
+      "icon": "assets/generated/icon.icns",
       "hardenedRuntime": false
     },
     "win": {

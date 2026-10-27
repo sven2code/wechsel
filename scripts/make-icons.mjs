@@ -1,4 +1,4 @@
-// Erzeugt Tray- und App-Icons als PNG – ohne externe Abhängigkeiten.
+// Erzeugt die Tray-Icons als PNG (App-Icon: scripts/render-icon.mjs) – ohne externe Abhängigkeiten.
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { deflateSync } from 'node:zlib';
 
@@ -86,12 +86,9 @@ const desk = (c) => [
 
 const black = [0, 0, 0, 255];
 const teal = [38, 120, 112, 255];
-const white = [255, 255, 255, 255];
 
 for (const [name, size] of [['trayTemplate.png', 16], ['trayTemplate@2x.png', 32]]) {
   writeFileSync(new URL(name, OUT), png(size, render(size, desk(black))));
 }
 writeFileSync(new URL('tray-win.png', OUT), png(32, render(32, desk(teal))));
-const appShapes = [{ x: 0.06, y: 0.06, w: 0.88, h: 0.88, r: 0.2, color: teal }, ...desk(white).map((s) => ({ ...s, x: 0.2 + s.x * 0.6, y: 0.2 + s.y * 0.6, w: s.w * 0.6, h: s.h * 0.6, r: s.r * 0.6 }))];
-writeFileSync(new URL('icon.png', OUT), png(512, render(512, appShapes)));
-console.log('Icons erzeugt in assets/generated/');
+console.log('Tray-Icons erzeugt in assets/generated/');
