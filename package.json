@@ -1,0 +1,66 @@
+{
+  "name": "wechsel",
+  "productName": "Wechsel",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Ruhige Desktop-App für den Wechsel zwischen Sitzen, Stehen und Bewegungspausen.",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "build:icons": "node scripts/make-icons.mjs",
+    "build:main": "node scripts/build-main.mjs",
+    "build:renderer": "vite build",
+    "build": "npm run build:icons && npm run build:main && npm run build:renderer",
+    "start": "npm run build && electron .",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "package:mac": "npm run build && electron-builder --mac --dir",
+    "package:mac:dmg": "npm run build && electron-builder --mac dmg",
+    "package:win": "npm run build && electron-builder --win nsis"
+  },
+  "build": {
+    "appId": "de.svenhuelsemann.wechsel",
+    "productName": "Wechsel",
+    "files": [
+      "dist-electron/**",
+      "dist/**",
+      "assets/**",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "mac": {
+      "category": "public.app-category.healthcare-fitness",
+      "target": "dir",
+      "extendInfo": {
+        "LSUIElement": true,
+        "NSUserNotificationAlertStyle": "alert"
+      },
+      "identity": "-",
+      "icon": "assets/generated/icon.png",
+      "hardenedRuntime": false
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/generated/icon.png"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "electron": "^45.0.0",
+    "electron-builder": "^26.18.0",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "license": "MIT",
+  "author": "Sven Hülsemann"
+}
