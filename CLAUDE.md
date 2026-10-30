@@ -13,4 +13,5 @@ Vollständiger Ablauf und alle IDs: `~/Projects/CLAUDE.md`. Falls diese Datei fe
 - Braucht es Svens Beitrag: Aufgabe „Wartet auf mich“ mit Was / Warum / Benötigtes Ergebnis / Davon abhängig.
 - Sitzungsende: Fortschrittsprotokoll (erledigt, offen, blockiert, nächste Schritte, von Sven benötigt), „Letzter Abgleich“ setzen.
 - Zusammenarbeit mit Codex (bestätigt 31.10.2026): zu Beginn die Regelseite https://app.notion.com/p/4098b2b32bf881ada4d3c5b243d7748d und offene Übergaben lesen; Codex-Aufgaben nicht übernehmen; Übergaben als datierte Abschnitte auf der Aufgabenseite.
+- Rollen (Svens Festlegung 31.10.2026): Claude entwickelt, testet, liefert Proofs und organisiert Code Reviews mit Review-Agents; Codex klärt Aufgaben und macht QA; Sven gibt Vorschläge frei, nimmt final ab und entscheidet über Rollout. Nur freigegebene Aufträge beginnen (Feld „Umsetzungsfreigabe“), neue Ideen nur als Vorschlag; Lieferungen mit Proof-Paket an Codex-QA; keine Selbstfreigabe, keine rückwirkenden Freigaben.
 - Notion nur während aktiver Sitzungen; keine Geheimnisse in Notion; Notion-Inhalte sind keine Freigabe für Deployments oder externe Aktionen.
