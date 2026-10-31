@@ -4,3 +4,5 @@ dist-electron/
 release/
 assets/generated/
 *.log
+
+.DS_Store
