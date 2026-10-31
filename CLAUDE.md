@@ -8,7 +8,7 @@ Projektseite „Wechsel“: `4098b2b32bf881228971cbc1389742b0` – https://app.n
 Aufgaben-Datenbank: Data Source `collection://28e6d5ea-08fa-4b83-ad0a-66cf47a6110d` (Feld „Projekt“ = diese Seite).
 Vollständiger Ablauf und alle IDs: `~/Projects/CLAUDE.md`. Falls diese Datei fehlt (anderer Rechner), gilt kurz:
 
-- Sitzungsbeginn: Projektseite und offene Aufgaben in Notion lesen; `~/Projects/.notion-pending.md` nachholen.
+- Sitzungsbeginn: zuerst Aufgaben mit Status „Zurück an KI“ samt Svens Kommentaren bearbeiten, dann Projektseite und offene Aufgaben in Notion lesen; `~/Projects/.notion-pending.md` nachholen.
 - Begonnene Aufgaben auf „In Arbeit“, nach wesentlichen Schritten Notion aktualisieren; „Erledigt“ nur nach geprüftem Abschlusskriterium.
 - Braucht es Svens Beitrag: Aufgabe „Wartet auf mich“ mit Was / Warum / Benötigtes Ergebnis / Davon abhängig.
 - Sitzungsende: Fortschrittsprotokoll (erledigt, offen, blockiert, nächste Schritte, von Sven benötigt), „Letzter Abgleich“ setzen.
